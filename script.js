@@ -5,8 +5,12 @@ function check() {
   console.log(str);
   if (reg.test(str)) {
     info.innerHTML = "Ім'я файлу правильне";
+    info.classList.add("correct");
+    info.classList.remove("wrong");
   } else {
     info.innerHTML = "Ім'я файлу неправильне";
+    info.classList.add("wrong");
+    info.classList.remove("correct");
   }
 }
 document.getElementById("check").addEventListener("click", check);
